@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+    <title>Animacion</title>
+</head>
+<body>
+    <section>
+        <h2>Slipknot</h2>
+        <div class="contenedor">
+            <div class="contenedor-animacion"></div>
+        </div>
+    </section>
+    <script>
+        const contenedor = document.getElementsByClassName('contenedor')[0];
+        const contenedorAnimacion = document.getElementsByClassName('contenedor-animacion');
+
+        for (var i = 1; i < 400; i++) {
+            contenedor.innerHTML += '<div class="contenedor-animacion"></div>';
+            contenedorAnimacion[i].style.animationDelay = `${i * 0.05}s`;
+
+        }
+    </script>
+    
+</body>
+</html>
